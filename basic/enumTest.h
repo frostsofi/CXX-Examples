@@ -1,13 +1,7 @@
 #include <iostream>
 
-void TestValueType(const std::string& iString) {
-    std::cout << "Lvalue reference" << std::endl;
-}
-
-void TestValueType(const std::string&& iString) {
-    std::cout << "Rvalue reference" << std::endl;
-}
-
+// Test enum values scop
+// of enum and enum class
 enum Color {
     Orange,
     Yellow
@@ -28,21 +22,19 @@ enum class FruitType {
    Apple
 };
 
+// Test value which is over
+// then underlying type
+
 enum class DeviceType : char {
    Phone = 10,
    // Laptop = 300
 };
 
-int main() 
-{
+void EnumTest() {
 
-    // Expression types
-    TestValueType("Hello!");
-    std::string test = "Hello!";
-    TestValueType(test);
-    TestValueType(std::move(test));
+    // This example shows difference between enum and enum class
+    // implicit conversion to int type
 
-    // Enum 
     Color curColor = Color::Orange;
     if (curColor == Fruit::Apple) {
         std::cout << "Enum problem with implicit comparison !" << std::endl;
@@ -55,5 +47,4 @@ int main()
     //    std::cout << "Enum problem with implicit comparison !" << std::endl;
     //}
 
-    return 0;
 }
