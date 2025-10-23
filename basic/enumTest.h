@@ -30,7 +30,8 @@ enum class DeviceType : char {
    // Laptop = 300
 };
 
-void EnumTest() {
+void EnumTest() 
+{
 
     // This example shows difference between enum and enum class
     // implicit conversion to int type

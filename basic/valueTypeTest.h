@@ -9,8 +9,8 @@ void TestValueType(const std::string&& iString) {
     std::cout << "Rvalue reference" << std::endl;
 }
 
-void ValueTypeTest() {
-
+void ValueTypeTest() 
+{
     TestValueType("Hello!");
     std::string test = "Hello!";
     TestValueType(test);
