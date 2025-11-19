@@ -2,6 +2,8 @@
 #include "valueTypeTest.h"
 #include "usingTest.h"
 #include "typeidTest.h"
+#include "sizeTest.h"
+#include "autoTest.h"
 
 int main() 
 {
@@ -9,6 +11,8 @@ int main()
     EnumTest();
     ValueTypeTest();
     UsingTest();
-
+    SizeTest();
+    AutoTest();
+    
     return 0;
 }
